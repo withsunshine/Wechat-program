@@ -1,0 +1,7 @@
+/**app.wxss**/
+
+/* 全局添加背景颜色 */
+page{
+  background-color: #F5F6F7;
+}
+
