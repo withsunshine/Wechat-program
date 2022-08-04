@@ -1,0 +1,33 @@
+<!--pages/category/category.wxml-->
+
+<!-- 左侧按钮滑块功能 -->
+<scroll-view class="categoryItem" scroll-y="true">
+    <view wx:for="{{categoryItem}}" wx:key="*this" class="item">
+        <!-- bindtap在标签结构末端添加事件，触发事件 -->
+        <!-- data-[自定义名称]="传参" 数据缓存 -->
+        <view class="{{ index == num ? 'con' : '' }}" data-index="{{index}}" bindtap="setNum">
+            {{item}}
+        </view>
+    </view>
+</scroll-view>
+
+<!-- 右侧商品列表滑块功能 -->
+<scroll-view class="contentItem" scroll-y="true">
+    <view class="content">
+        <view class="h1">
+            家用电器
+        </view>
+        <view class="ul">
+            <view class="li" wx:for="{{content[num]}}" wx:key="*this">
+                <navigator url="/pages/details/details" class="right" hover-class="none">
+                    <image src="{{item.img}}"></image>
+                </navigator>
+                <text>{{item.name}}</text>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+
+
+
+

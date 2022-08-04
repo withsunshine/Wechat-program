@@ -1,0 +1,38 @@
+<!--pages/car/car.wxml-->
+<view class="goodslist"  wx:for="{{goodsList}}" wx:key="*this">
+        <view class="left">
+                <image src="{{item.goodsImage}}"></image>
+        </view>
+        <view class="right">
+                <view class="goods_name">
+                        <text>{{item.goodsName}}</text>
+                </view>
+                <view class="goods_price">
+                        <text>￥{{item.goodsPrice}}</text>
+                </view>
+                <view class="buttons">
+                    <!-- 3.数量减一 -->
+                    <view class="sub btn" data-index="{{index}}" bindtap="sub">-</view>
+                    <text class="num">{{item.num}}</text>
+                    <!-- 1.数量加一 -->
+                    <view class="add btn" data-index="{{index}}" bindtap="add">+</view>
+                </view>
+                <!-- 5.删除数据 -->
+                <view class="car" data-index="{{index}}" catchtap="del">
+                        <image src="/images/shanchu.png"></image>
+                </view>
+        </view>
+</view>
+
+<!-- 底部导航 -->
+<view class="bottomNav">
+    <view class="warp">
+        <!-- 9.添加总价格 -->
+        总价格：<text>￥{{totalData}}</text>
+        <view class="order">下单</view>
+    </view>
+</view>
+
+<!-- 提示 -->
+<view class="goodsNull" wx:for="{{!goodlist.length}}">
+<view class="text"> 购物车为空，请选择商品</view></view>

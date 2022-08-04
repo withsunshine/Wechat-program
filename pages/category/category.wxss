@@ -1,0 +1,63 @@
+/* pages/category/category.wxss */
+.categoryItem{
+    width: 25%;
+    float: left;
+    height: 100vh;
+}
+.categoryItem .item view{
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background-color: #9dd8d3;
+    font-size: 28rpx;
+    position: relative;
+}
+
+.categoryItem .item view.con{
+    background-color: #fff;
+    color:#04ad88;
+    font-weight: 700;
+}
+.categoryItem .item view.con::after{
+    content: "";
+    display: block;
+    width: 6rpx;
+    height: 40rpx;
+    background-color: #04ad88;
+    position: absolute;
+    left:0px;
+    top: 30rpx;
+}
+
+.contentItem {
+    width: 75%;
+    float: right;
+    /* 设置高度 100vh 屏幕总高度 */
+    height: 100vh;
+}
+.contentItem image{
+    width: 120rpx;
+    height: 120rpx;
+}
+.contentItem .content{
+    width: 100%;
+}
+.contentItem .content .h1{
+    font-size: 36rpx;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #fff;
+}
+.contentItem .ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contentItem .ul .li{
+    width: 33.33%;
+    text-align: center;
+    padding: 10rpx 0rpx;
+}
+.contentItem .ul .li text{
+    display: block;
+}

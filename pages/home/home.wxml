@@ -1,0 +1,49 @@
+<!-- pages/home/home.wxml 首页 ctrl + / -->
+
+<!-- 轮播图 -->
+<view class="banner">
+        <swiper 
+                indicator-dots="true" 
+                indicator-color="#ffffff" 
+                indicator-active-color="#007AAE"
+                autoplay="true"
+        >
+                <block wx:for="{{imgs}}" wx:key="*this">
+                        <swiper-item>
+                                <image mode="widthFix" src="{{item}}"></image>
+                        </swiper-item>
+                </block>
+        </swiper>
+</view>
+
+<!-- 分类 -->
+<view class="categroy">
+        <view class="item" wx:for="{{iconArray}}" wx:key="*this">
+                <image src="{{item.url}}"></image>
+                <text>{{item.text}}</text>
+        </view>
+</view>
+
+<!-- 商品列表 -->
+<view class="commotTitle">
+        <text>商品列表</text>
+</view>
+<view class="goodslist" wx:for="{{goodsList}}" wx:key="this">
+        <view class="left">
+                <image src="{{item.goodsImage}}"></image>
+        </view>
+        <navigator url="/pages/details/details" class="right" hover-class="none">
+                <view class="goods_name">
+                        <text>{{item.goodsName}}</text>
+                </view>
+                <view class="goods_address">
+                        <text>{{item.goodsAddress}}</text>
+                </view>
+                <view class="goods_price">
+                        <text>￥{{item.goodsPrice}}</text>
+                </view>
+                <view class="car">
+                        <image src="/images/car.png"></image>
+                </view>
+        </navigator>
+</view>

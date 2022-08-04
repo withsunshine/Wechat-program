@@ -1,0 +1,85 @@
+/* pages/home/home.wxss */
+.banner swiper{
+    /* 移动端适配 rpx rem vm */
+    /* px 像素 */
+    /* 1rpx = 0.5px */
+    /* 2rpx = 1px */
+    height: 254rpx;
+    /* height: 127px; */
+}
+.banner image{
+    width: 100%;
+}
+/* 分类样式 */
+.categroy image{
+    width: 80rpx;
+    height: 80rpx;
+}
+.categroy {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    margin-top: 30rpx;
+}
+.categroy .item{
+    width: 25%;
+    text-align: center;
+    margin-bottom: 30rpx;
+}
+.categroy .item text{
+    display: block;
+}
+
+.commotTitle{
+    height: 100rpx;
+    line-height: 100rpx;
+    background-color: #fff;
+    font-size: 36rpx;
+    text-indent: 1em;
+    margin-top: 20rpx;
+}
+/* 商品列表 */
+.goodslist{
+    display: flex;
+    padding:20rpx 0px;
+    background-color: #fff;
+    margin-bottom: 2rpx;
+}
+.goodslist .left{
+    width: 240rpx;
+    text-align: center;
+}
+.goodslist .left image{
+    width: 200rpx;
+    height: 200rpx;
+}
+.goodslist .right{
+    flex:1;
+    position: relative;
+}
+.goodslist .right image{
+    width: 44rpx;
+    height: 44rpx;
+}
+.goodslist .right .goods_name{
+    font-size: 36rpx;
+    color:#808080;
+    height: 100rpx;
+    /* 溢出隐藏 */
+    overflow: hidden;
+}
+.goodslist .right .goods_address{
+    font-size: 28rpx;
+    color:#929292;
+}
+.goodslist .right .goods_price{
+    font-size: 40rpx;
+    color:#ff1493;
+}
+.goodslist .right .car{
+    position: absolute;
+    width: 50rpx;
+    height: 50rpx;
+    right:50rpx;
+    bottom: 20px;
+}
